@@ -30,9 +30,21 @@ export const OtpModal: React.FC<OtpModalProps> = ({ onValidated, onClose }) => {
     const newOtp = [...otp];
     newOtp[index] = val;
     setOtp(newOtp);
+    // Move forward
+    if (val && index < 3) {
+      const nextInput = document.getElementById(`modal-otp-${index + 1}`);
+      if (nextInput) nextInput.focus();
+    }
     // Auto submit if full
     if (index === 3 && val) {
       verifyOtp();
+    }
+  };
+
+  const handleKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Backspace' && !otp[index] && index > 0) {
+      const prevInput = document.getElementById(`modal-otp-${index - 1}`);
+      if (prevInput) prevInput.focus();
     }
   };
 
@@ -84,10 +96,12 @@ export const OtpModal: React.FC<OtpModalProps> = ({ onValidated, onClose }) => {
                 {otp.map((digit, i) => (
                   <input
                     key={i}
+                    id={`modal-otp-${i}`}
                     type="text"
                     maxLength={1}
                     value={digit}
                     onChange={(e) => handleOtpChange(i, e.target.value)}
+                    onKeyDown={(e) => handleKeyDown(i, e)}
                     autoFocus={i === 0}
                     className="w-14 h-16 text-center text-2xl font-bold border border-gray-300 rounded-xl focus:border-[#000080] focus:ring-1 focus:ring-[#000080] outline-none"
                   />

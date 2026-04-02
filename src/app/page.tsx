@@ -10,6 +10,8 @@ const getIconUrl = (name: string) => {
     case 'Sparkles': return 'https://api.iconify.design/lucide:sparkles.svg?color=%23FF9933';
     case 'Hammer': return 'https://api.iconify.design/lucide:hammer.svg?color=%23FF9933';
     case 'Paintbrush': return 'https://api.iconify.design/lucide:paintbrush.svg?color=%23FF9933';
+    case 'MonitorSmartphone': return 'https://api.iconify.design/lucide:monitor-smartphone.svg?color=%23FF9933';
+    case 'Ticket': return 'https://api.iconify.design/lucide:ticket.svg?color=%23FF9933';
     default: return 'https://api.iconify.design/lucide:tool.svg?color=%23FF9933';
   }
 };

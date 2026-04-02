@@ -31,14 +31,14 @@ export const AppHeader: React.FC = () => {
             {!isWorker ? (
               <>
                 <Link href="/services" className="text-sm font-medium hover:text-[#FF9933] transition-colors">Find a Service</Link>
-                <Link href="/orders" className="text-sm font-medium hover:text-[#FF9933] transition-colors">My Bookings</Link>
-                <Link href="/worker-app" className="text-sm font-bold text-[#FF9933] flex items-center"><Briefcase size={16} className="mr-1"/> Become a Partner</Link>
+                <Link href="/login" className="text-sm font-medium hover:text-[#FF9933] transition-colors">Login / My Bookings</Link>
+                <Link href="/register" className="text-sm font-bold text-[#FF9933] flex items-center bg-orange-50/10 px-3 py-1.5 rounded-xl border border-[#FF9933]/30"><Briefcase size={16} className="mr-1.5"/> Earn with Us</Link>
               </>
             ) : (
               <>
                 <Link href="/worker-app/jobs" className="text-sm font-medium hover:text-[#FF9933] transition-colors">Job Requests</Link>
                 <Link href="/worker-app/wallet" className="text-sm font-medium hover:text-[#FF9933] transition-colors">Wallet</Link>
-                <Link href="/" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Back to Customer App</Link>
+                <Link href="/" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Switch Profile</Link>
               </>
             )}
           </div>

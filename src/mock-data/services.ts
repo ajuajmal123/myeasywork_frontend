@@ -46,5 +46,21 @@ export const MOCK_SERVICES = [
     description: 'Wall painting, touchups, weather coating',
     icon: 'Paintbrush',
     basePrice: 1500,
+  },
+  {
+    id: 's_csc',
+    name: 'CSC / Akshaya Service',
+    category: 'Digital Services',
+    description: 'Govt forms, PAN/Aadhar updates, Certificates',
+    icon: 'MonitorSmartphone',
+    basePrice: 100,
+  },
+  {
+    id: 's_digital_payments',
+    name: 'Bill Payments & Ticketing',
+    category: 'Digital Services',
+    description: 'Utility bills, Train/Flight tickets, Fastag',
+    icon: 'Ticket',
+    basePrice: 50,
   }
 ];
