@@ -22,7 +22,12 @@ export default function Home() {
       {/* Search Header Banner */}
       <div className="bg-white px-4 pt-6 pb-6 rounded-b-3xl shadow-sm mb-6 border-b border-gray-100">
         <h1 className="text-3xl font-extrabold text-[#1A1A1A] mb-1">Services <br/> at your door</h1>
-        <p className="text-gray-500 mb-6 text-sm">Transparent pricing, trusted professionals.</p>
+        <p className="text-gray-500 mb-4 text-sm">Transparent pricing, trusted professionals.</p>
+        <div className="mb-6 space-y-1 border-l-2 border-[#FF9933] pl-3">
+          <p className="text-xs font-medium text-gray-600">रोजगार बढ़ेगा, देश बढ़ेगा।</p>
+          <p className="text-xs font-medium text-gray-600">Empowering Workers, Building the Nation.</p>
+          <p className="text-xs font-medium text-gray-600">തൊഴിലിലൂടെ മുന്നോട്ട്, നാടിന്റെ കരുത്ത്.</p>
+        </div>
         
         <div className="relative mb-2">
           <input 

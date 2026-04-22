@@ -13,7 +13,7 @@ export const AppHeader: React.FC = () => {
     <header className="sticky top-0 z-40 w-full bg-[#000080] text-white shadow-md">
       <div className="flex h-16 items-center px-4 md:px-6">
         <Link href={isWorker ? '/worker-app' : '/'} className="flex items-center gap-2 font-bold text-xl tracking-tight">
-          <span className="text-[#FF9933]">My</span>EasyWork
+          <img src="/logo.jpeg" alt="MyEasyWork.in Logo" className="h-10 w-auto bg-white p-1 rounded-md" />
           {isWorker && <Badge>Partner</Badge>}
         </Link>
 
