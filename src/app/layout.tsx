@@ -19,13 +19,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#F8F9FA] pb-20 lg:pb-0 text-[#1A1A1A] flex flex-col min-h-screen`}>
+      <body className={`${inter.className} bg-brand-blue text-white flex flex-col min-h-screen selection:bg-brand-gold selection:text-brand-blue`}>
         <AppHeader />
-        <main className="flex-1">
+        <main className="flex-1 w-full bg-[#001F3F] text-white">
           {children}
         </main>
         <Footer />
-        <MobileBottomNav type="customer" />
+        <div className="md:hidden">
+          <MobileBottomNav type="customer" />
+        </div>
       </body>
     </html>
   );
